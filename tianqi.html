@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+    * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        body {
+            background-color: #31B0D5;
+        }
+        
+        body {
+            font: 400 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+            overflow-x: hidden;
+            margin: 0 auto;
+            background: #f2f2f2;
+        }
+        
+        .navbar,
+        body {
+            min-width: 320px;
+            max-width: 540px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            width: 100%;
+            background-color: #31B0D5;
+        }
+        
+        #tianqi {
+            width: 100%;
+            margin: auto;
+        }
+        
+        #tianqi-1 {
+            width: 100%;
+            margin: 0 auto;
+            background-size: auto;
+        }
+        
+        #diqu {
+            width: 100%;
+            height: 7rem;
+            text-align: center;
+            background: url(img/9.jpg) no-repeat;
+            background-size: cover;
+            background-position: center center;
+            padding-top: 2rem;
+        }
+        
+        #heti {
+            width: 76%;
+            height: 3rem;
+            margin: 0 auto;
+            /*margin-top: 2rem;*/
+        }
+        
+        #cha {
+            width: 54%;
+            height: 100%;
+            text-decoration: none;
+            /*margin-top: 1.4rem;*/
+            /*margin-left: -3px;*/
+        }
+        
+        #chaxun {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: red;
+        }
+        
+        #ul1 li {
+            float: left;
+            font-size: 1.5rem;
+            width: 14%;
+        }
+        
+        #ul2 {
+            margin-top: 4rem;
+        }
+        
+        #ul2 li {
+            position: absolute;
+            display: none;
+        }
+        
+        #zhoutu {
+            width: 100%;
+            margin-top: 140px;
+            background: url(img/14.gif) no-repeat;
+            background-size: cover;
+            background-position: center center;
+            margin: 0 auto;
+        }
+        
+        #zhou {
+            width: 90%;
+            margin-top: 140px;
+            margin: 0 auto;
+        }
+        
+        #shuow {
+            background: url(img/16.jpg) no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        
+        #zhou .tq {
+            float: left;
+            margin-left: 3rem;
+        }
+    }
+    .tq:after {
+        clear: both;
+        display: block;
+        content: "";
+        overflow: hidden;
+    }
+    #zhou:after {
+        clear: both;
+        display: block;
+        content: "";
+        overflow: hidden;
+    }
+    .diqu {
+        font-size: 2rem;
+    }
+    .tex {
+        font-size: 1.7rem;
+        color: #B92C28;
+    }
+    .ro {
+        font-size: 1.5rem;
+    }
+    .ro1 {
+        font-size: 1.2rem;
+    }
+    .tuijian:after {
+        clear: both;
+        display: block;
+        content: "";
+        overflow: hidden;
+    }
+    .tuijian p {
+        padding: 1rem;
+        width: 50%;
+        float: left;
+        font-weight: bolder;
+    }
+    #pingmu {
+        position: relative;
+        left: 5%;
+        top: 0;
+        width: 90%;
+        height: 15rem;
+        background: cadetblue;
+        text-align: center;
+        line-height: 15rem;
+        font-size: 2rem;
+        color: red;
+        border-radius: 0.2rem;
+        display: none;
+    }
+    #hide {
+        position: absolute;
+        right: 0;
+        top: -40%;
+        font-size: 3rem;
+        color: #000000;
+    }
+    .tt {
+        color: #D9534F;
+    }
+    .tou {
+        float: left;
+        width: 16%;
+        height: 36px;
+        /*margin-left: 2%;*/
+        /*margin-top: 18px;*/
+    }
+    .tou1 {
+        width: 100%;
+        height: 35px;
+        background-color: white;
+    }
+    .fangtu {
+        width: 100%;
+        height: 35px;
+        /*margin-left: 6px;*/
+        /*margin-top: 5px;*/
+    }
+    .zhentu {
+        width: 100%;
+        height: 35px;
+        /*margin-top: 5px;*/
+    }
+    .jiantou1 {
+        margin-top: -35px;
+        margin-left: 22px;
+    }
+    .liebiao {
+        position: absolute;
+        width: 100px;
+        height: 96px;
+        background-color: #F0F0F4;
+        top: 110px;
+        left: 38px;
+        display: none;
+    }
+    .liebiao1 {
+        width: 100%;
+        height: 49px;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 49px;
+        color: black;
+    }
+    .yikuang {
+        width: 100%;
+        height: 27%;
+        background-color: #D43D3D;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        color: white;
+    }
+    .jiantou {
+        float: left;
+        width: 32px;
+        height: 32px;
+        margin-top: 9px;
+        margin-left: 10px;
+    }
+    .souzi {
+        width: 20%;
+        height: 50px;
+        line-height: 50px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="yikuang">
+            <a href="toutiao.html"><img class="jiantou" src="img/5.png"></a>
+            <div class="souzi">
+                天气查询
+            </div>
+        </div>
+        <div id="diqu">
+            <div id="heti">
+                <div class="tou">
+                    <div class="tou1">
+                        <div class="fangtu">
+                            <img class="zhentu" src="img/10.jpg">
+                            <!--<div class="jiantou1"><img src="img/7.png"></div>-->
+                        </div>
+                    </div>
+                </div>
+                <input type="text" name="" id="cha" value="" placeholder="请输入要查询的地区" /><span id="chaxun">查询</span>
+            </div>
+        </div>
+        <div class="liebiao">
+            <a href="sousuo.html">
+                <div class="liebiao1">
+                    头条查询
+                </div>
+            </a>
+            <a href="2huoche.html">
+                <div class="liebiao1">
+                    火车票查询
+                </div>
+            </a>
+        </div>
+    </nav>
+    <div id="tianqi">
+        <div id="tianqi-1">
+
+
+            <div id="yi">
+                <div id="zhoutu">
+                    <div id="zhou">
+
+                    </div>
+                </div>
+
+
+                <div id="shuow" style="display: none;">
+
+                    <p class="diqu">地区:</p>
+                    <div class="tuijian">
+
+                        <h4 class="aa">出行建议:</h3>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    </div>
+    <div id="pingmu">
+        你查询的不存在
+        <span id="hide">
+			   X
+			</span>
+    </div>
+</body>
+<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://apps.bdimg.com/libs/underscore.js/1.7.0/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/tianqi.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    var b = true;
+    $(".tou").click(function() {
+        if (b == false) {
+            b = true;
+            $(".liebiao").css("display", "none")
+        } else {
+            b = false;
+            $(".liebiao").css("display", "block")
+        }
+    })
+
+
+    var ping = document.getElementById("pingmu")
+    var hid = document.getElementById("hide")
+    var didian
+    $("#chaxun").click(function() {
+        if ($("#cha").val() == "") {
+            alert("请输入内容")
+            return
+        }
+
+        $.each(arr.cities, function(index) {
+            var chengshi = arr.cities[index].city;
+            var chengshiid = arr.cities[index].cityid;
+            //  	var ind=index
+            if ($("#cha").val() == chengshi) {
+                $("#shuow").show()
+                didian = chengshiid
+                $("#cha").val("")
+
+            }
+
+
+
+        });
+        sp()
+        $(".tq").remove()
+        $(".aa").remove()
+        $(".mlgb").remove()
+    })
+
+
+
+    function sp() {
+
+        $.ajax({
+            type: "get",
+            url: "3.php",
+            data: {
+                "cityIds": didian
+            },
+
+
+            success: function(data) {
+
+                var obj = JSON.parse(data)
+                var objs = obj.value[0]
+                console.log(objs)
+                var tex = "<span class='mlgb'>" + objs.city + "</span>";
+                $(".diqu").append(tex)
+                var zhou = objs.weathers;
+                var jianyi = objs.indexes
+                for (var i = 0; i < jianyi.length; i++) {
+                    console.log(jianyi[i])
+                    var txet = "<p class='aa'><span class='tex'>" + jianyi[i].name + "</span>:&nbsp;&nbsp;<span class='ro1'>" + jianyi[i].level + "</span></br><span class='ro'>" + jianyi[i].content + "</span></p>"
+                    $(".tuijian").append(txet)
+                }
+
+                for (var i = 0; i < zhou.length; i++) {
+                    console.log(zhou[i])
+                    var tian = "<p class='tq'><span class='immg'></span>" + zhou[i].week + ":&nbsp;&nbsp;&nbsp;</br>天气：&nbsp;&nbsp;&nbsp;<a class='tt'>" + zhou[i].weather + "</a></br>白天气温:&nbsp;&nbsp;&nbsp;" + zhou[i].temp_day_c + "</br>夜间气温:&nbsp;&nbsp;&nbsp;" + zhou[i].temp_night_c + "</p>"
+                    $("#zhou").append(tian);
+                }
+                $.each($('.tq a'), function(i) {
+                    var aaa = $('.tq a').eq(i).html();
+                    if (aaa == '阴' || aaa == '多云') {
+                        var index = i;
+                        var tu = ["雷.png", "晴.png", "雨天.png", "阴.png"];
+                        var imglp = "<img src='img/" + tu[3] + "'>";
+                        $('.immg').eq(index).append(imglp)
+                    }
+                    if (aaa == '中雨' || aaa == '大雨' || aaa == '阵雨' || aaa == '雷阵雨') {
+                        var index = i;
+                        var tu = ["雷.png", "晴.png", "雨天.png", "阴.png"];
+                        var imglp = "<img src='img/" + tu[0] + "'>";
+                        $('.immg').eq(index).append(imglp)
+                    }
+                    if (aaa == '小雨') {
+                        var index = i;
+                        var tu = ["雷.png", "晴.png", "雨天.png", "阴.png"];
+                        var imglp = "<img src='img/" + tu[2] + "'>";
+                        $('.immg').eq(index).append(imglp)
+                    }
+                    if (aaa == '晴') {
+                        var index = i;
+                        var tu = ["雷.png", "晴.png", "雨天.png", "阴.png"];
+                        var imglp = "<img src='img/" + tu[1] + "'>";
+                        $('.immg').eq(index).append(imglp)
+                    }
+                });
+            }
+        });
+    }
+</script>
+
+</html>

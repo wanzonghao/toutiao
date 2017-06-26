@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        
+        body {
+            font: 400 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+            overflow-x: hidden;
+            margin: 0 auto;
+            background: #f2f2f2;
+        }
+        
+        .liang,
+        body {
+            min-width: 320px;
+            max-width: 540px;
+        }
+        
+        #sousuo {
+            width: 100%;
+        }
+        
+        .liang {
+            width: 100%;
+            height: 200px;
+            margin: 0 auto;
+        }
+        
+        .yikuang {
+            width: 100%;
+            height: 27%;
+            background-color: #D43D3D;
+            font-size: 1.5rem;
+            font-weight: bolder;
+            color: white;
+        }
+        
+        .jiantou {
+            float: left;
+            width: 32px;
+            height: 32px;
+            margin-top: 9px;
+            margin-left: 10px;
+        }
+        
+        .souzi {
+            width: 20%;
+            height: 50px;
+            line-height: 50px;
+            margin: 0 auto;
+        }
+        
+        .erkuang {
+            width: 100%;
+            height: 73%;
+            background: url(img/11.jpg) no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        
+        .tou {
+            float: left;
+            width: 45px;
+            height: 43px;
+            margin-left: 2%;
+            margin-top: 7px;
+        }
+        
+        .tou1 {
+            width: 37px;
+            height: 35px;
+            background-color: white;
+            border-radius: 3px;
+            margin-top: -5px;
+        }
+        
+        .fangtu {
+            width: 30px;
+            height: 25px;
+            margin-left: 6px;
+            margin-top: 5px;
+        }
+        
+        .zhentu {
+            width: 25px;
+            height: 25px;
+            margin-top: 5px;
+        }
+        
+        .jiantou1 {
+            margin-top: -33px;
+            margin-left: 17px;
+        }
+        
+        .soukuang1 {
+            width: 16%;
+            height: 35px;
+            margin-top: 7px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            color: black;
+        }
+        
+        .soukuang2 {
+            width: 16%;
+            height: 35px;
+            margin-top: 7px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            color: black;
+        }
+        
+        .soukuang3 {
+            width: 16%;
+            height: 35px;
+            margin-top: 7px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            color: black;
+        }
+        
+        .soukuang4 {
+            width: 60%;
+            height: 35px;
+            margin-top: 7px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            color: black;
+        }
+        
+        .soukuang5 {
+            width: 60%;
+            height: 35px;
+            margin-top: 7px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            color: black;
+        }
+        
+        .soukuang {
+            width: 10%;
+            height: 30px;
+            margin-top: 40px;
+        }
+        
+        .riqi {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 0.8rem;
+            font-weight: bolder;
+            color: white;
+        }
+        
+        .difang {
+            float: left;
+            width: 65%;
+            margin-top: 8px;
+            text-align: center;
+            font-size: 0.8rem;
+            margin-left: 29px;
+            font-weight: bolder;
+            color: white;
+        }
+        
+        .many {
+            width: 100%;
+            background-color: #C9C9C9;
+        }
+        
+        .liebiao {
+            width: 210%;
+            height: 100px;
+            background-color: #F0F0F4;
+            display: none;
+        }
+        
+        .liebiao1 {
+            width: 100%;
+            height: 49px;
+            font-size: 1.2rem;
+            text-align: center;
+            line-height: 49px;
+        }
+        
+        .liebiao1 a {
+            color: black;
+        }
+        
+        .mokuai:nth-of-type(1) {
+            margin-top: 210px;
+        }
+        
+        .mokuai {
+            width: 95%;
+            height: 340px;
+            margin: 20px auto;
+            border-bottom: 1px solid black;
+            background: url(img/17.jpg) no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        
+        .liechehao {
+            width: 150px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bolder;
+        }
+        
+        .zongshi {
+            float: right;
+            width: 150px;
+            height: 40px;
+            margin-top: -50px;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bolder;
+        }
+        
+        .chushi {
+            width: 150px;
+            height: 40px;
+            margin-top: 20px;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bolder;
+        }
+        
+        .daoshi {
+            width: 150px;
+            height: 40px;
+            margin-top: 10px;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bolder;
+        }
+        
+        .shoufazhan {
+            float: right;
+            width: 150px;
+            height: 40px;
+            margin-top: -100px;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bolder;
+        }
+        
+        .zhongdianzhan {
+            float: right;
+            width: 150px;
+            height: 40px;
+            margin-top: -50px;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bolder;
+        }
+        
+        .jiaqian {
+            width: 100%;
+            height: 40px;
+            margin-top: 20px;
+        }
+        
+        .zuowei {
+            width: 30%;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bolder;
+        }
+        
+        .piaojia {
+            width: 30%;
+            height: 40px;
+            margin: -50px auto;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bolder;
+        }
+        
+        .piaoshu {
+            float: right;
+            width: 30%;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sousuo">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="liang">
+                <div class="yikuang">
+                    <a href="toutiao.html"><img class="jiantou" src="img/5.png"></a>
+                    <div class="souzi">
+                        火车票查询
+                    </div>
+                </div>
+                <div class="erkuang">
+                    <div class="tou">
+                        <div class="tou1">
+                            <div class="fangtu">
+                                <img class="zhentu" src="img/8.png">
+                                <!--<div class="jiantou1"><img src="img/7.png"></div>-->
+                            </div>
+                        </div>
+                        <div class="liebiao">
+                            <a href="sousuo.html">
+                                <div class="liebiao1">
+                                    头条查询
+                                </div>
+                            </a>
+                            <a href="tianqi.html">
+                                <div class="liebiao1">
+                                    天气查询
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="riqi">
+                        出发日期：<input type="text" class="soukuang1">年<input type="text" class="soukuang2">月<input type="text" class="soukuang3">日
+                    </div>
+                    <div class="difang">
+                        出发地：<input type="text" class="soukuang4"></br>目的地：<input type="text" class="soukuang5">
+                    </div>
+                    <input type="button" name="" class="soukuang" value="查询">
+                </div>
+            </div>
+
+
+        </nav>
+        <div class="many">
+
+        </div>
+    </div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="http://apps.bdimg.com/libs/underscore.js/1.7.0/underscore-min.js" charset="utf-8"></script>
+
+
+<script>
+    var b = true;
+    $(".tou").click(function() {
+        if (b == false) {
+            b = true;
+            $(".liebiao").css("display", "none")
+        } else {
+            b = false;
+            $(".liebiao").css("display", "block")
+        }
+    })
+
+    $(".soukuang").click(function() {
+        fa()
+    })
+
+    function fa() {
+        $(".many").html("");
+        var shijian = $(".soukuang1").val() + "-" + $(".soukuang2").val() + "-" + $(".soukuang3").val();
+        var chufa = $(".soukuang4").val();
+        var daoda = $(".soukuang5").val();
+        $.ajax({
+            type: "get",
+            url: "1.php",
+            data: {
+                "departureDate": shijian, //需要传入的参数
+                "departureCityName": chufa,
+                "arrivalCityName": daoda
+            },
+            success: function(data) {
+                // console.log(data);
+                var obj = JSON.parse(data);
+                // console.log(obj.data);
+                // console.log(data);
+                var objs = obj.data.list;
+                console.log(objs);
+
+                $.each(objs, function(index) {
+                    var damaolv =
+                        '<div class="mokuai">' +
+                        '<p class="liechehao">' + objs[index].trainNum + '次列车' + '</p>' +
+                        '<p class="zongshi">' + '全程:' + objs[index].durationStr + '</p>' +
+                        '<p class="chushi">' + objs[index].departDepartTime + '发车' + '</p>' +
+                        '<p class="daoshi">' + objs[index].destArriveTime + '到站' + '</p>' +
+                        '<p class="shoufazhan">' + '首发:' + objs[index].departStationName + '</p>' +
+                        '<p class="zhongdianzhan">' + '终点:' + objs[index].destStationName + '</p>' +
+                        '<div class="jiaqian">' +
+                        '<p class="zuowei">' + objs[index].prices[0].seatName + '</p>' +
+                        '<p class="piaojia">' + objs[index].prices[0].price + '元' + '</p>' +
+                        '<p class="piaoshu">' + objs[index].prices[0].leftNumber + '张' + '</p>' +
+                        '</div>' +
+                        '<div class="jiaqian">' +
+                        '<p class="zuowei">' + objs[index].prices[1].seatName + '</p>' +
+                        '<p class="piaojia">' + objs[index].prices[1].price + '元' + '</p>' +
+                        '<p class="piaoshu">' + objs[index].prices[1].leftNumber + '张' + '</p>' +
+                        '</div>' +
+                        '<div class="jiaqian">' +
+                        '<p class="zuowei">' + objs[index].prices[2].seatName + '</p>' +
+                        '<p class="piaojia">' + objs[index].prices[2].price + '元' + '</p>' +
+                        '<p class="piaoshu">' + objs[index].prices[2].leftNumber + '张' + '</p>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>';
+                    $('.many').eq(0).append(damaolv)
+                })
+            }
+        })
+    }
+</script>
+
+</html>

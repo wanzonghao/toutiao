@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#zong {
+    width: 100%;
+}
+
+#top {
+    width: 100%;
+    height: 88px;
+    font-size: 10px;
+}
+
+.top1 {
+    width: 100%;
+    height: 50%;
+    background-color: #D43D3D;
+}
+
+.xinfeng {
+    float: left;
+    width: 2em;
+    height: 2em;
+    margin-top: 1.2em;
+    margin-left: 5%;
+}
+
+.fengtu {
+    width: 2em;
+    height: 2em;
+}
+
+.jinri {
+    width: 30%;
+    height: 50px;
+    margin-left: 35%;
+    font-size: 1.7em;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+}
+
+.jiazai {
+    width: 1em;
+    height: 1em;
+}
+
+.fangda {
+    margin-left: 90%;
+    margin-top: -32px;
+    ;
+}
+
+.jing {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+#topNav {
+    height: 100%;
+    overflow: hidden;
+    font: 16px/32px hiragino sans gb, microsoft yahei, simsun;
+    border-bottom: 1px solid #f8f8f8;
+    line-height: 40px;
+    margin-left: 0;
+    background-color: #F4F5F6;
+}
+
+.swiper-wrapper {
+    width: 100%;
+}
+
+#topNav .swiper-slide {
+    padding: 0 5px;
+    letter-spacing: 2px;
+    width: 4rem;
+    text-align: center;
+}
+
+#topNav .swiper-slide span {
+    transition: all .3s ease;
+    display: block;
+}
+
+#topNav .active span {
+    transform: scale(1.1);
+    color: #FF2D2D;
+}
+
+.zhenshi {
+    width: 30px;
+    height: 30px;
+    margin-left: 7%;
+    margin-top: 4px;
+}
+
+#moban {
+    width: 100%;
+}
+
+#box {
+    width: 94%;
+    height: 240px;
+    border-bottom: 1px solid black;
+    margin: 0 auto;
+}
+
+#box:nth-of-type(1) {
+    margin-top: 100px;
+}
+
+#box1 {
+    width: 100%;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+#box2 {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+}
+
+#box3 {
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 40px;
+}
+
+.tupian {
+    width: 30%;
+    height: 100px;
+    margin-left: 3%;
+}
+
+.xiaozi {
+    margin-left: 3%;
+}
+
+.xiaozi:nth-of-type(1) {
+    margin-left: 0;
+}

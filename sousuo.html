@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        
+        body {
+            font: 400 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+            overflow-x: hidden;
+            margin: 0 auto;
+            background: #f2f2f2;
+        }
+        
+        .liang,
+        body {
+            min-width: 320px;
+            max-width: 540px;
+        }
+        
+        @media screen and (max-width: 1024px) and (min-width: 320px) {
+            #topNav {
+                width: 95%;
+            }
+            .shizi {
+                width: 5%;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            #topNav {
+                width: 94%;
+            }
+            .shizi {
+                width: 6%;
+            }
+        }
+        
+        @media screen and (max-width: 414px) {
+            #topNav {
+                width: 91%;
+            }
+            .shizi {
+                width: 9%;
+            }
+        }
+        
+        @media screen and (max-width: 320px) {
+            #topNav {
+                width: 90%;
+            }
+            .shizi {
+                width: 10%;
+            }
+        }
+        
+        #sousuo {
+            width: 100%;
+        }
+        
+        .liang {
+            width: 100%;
+            height: 100px;
+            margin: 0 auto;
+        }
+        
+        .yikuang {
+            width: 100%;
+            height: 50%;
+            background-color: #D43D3D;
+            font-size: 1.5rem;
+            font-weight: bolder;
+            color: white;
+        }
+        
+        .jiantou {
+            float: left;
+            width: 32px;
+            height: 32px;
+            margin-top: 9px;
+            margin-left: 10px;
+        }
+        
+        .souzi {
+            width: 15%;
+            height: 50px;
+            line-height: 50px;
+            margin: 0 auto;
+        }
+        
+        .erkuang {
+            width: 100%;
+            height: 50%;
+            background-color: #C9C9C9;
+        }
+        
+        .tou {
+            float: left;
+            width: 45px;
+            height: 43px;
+            margin-left: 2%;
+            margin-top: 7px;
+        }
+        
+        .tou1 {
+            width: 45px;
+            height: 35px;
+            background-color: white;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            margin-top: -5px;
+        }
+        
+        .fangtu {
+            width: 30px;
+            height: 25px;
+            margin-left: 6px;
+            margin-top: 5px;
+        }
+        
+        .zhentu {
+            width: 25px;
+            height: 25px;
+            margin-top: 5px;
+        }
+        
+        .jiantou1 {
+            margin-top: -33px;
+            margin-left: 17px;
+        }
+        
+        .soukuang {
+            width: 83%;
+            height: 35px;
+            margin-top: 7px;
+            border: none;
+            outline: none;
+            font-size: 1.2rem;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+        
+        .many {
+            width: 100%;
+            background-color: #C9C9C9;
+        }
+        
+        #moban:nth-of-type(1) {
+            margin-top: 100px;
+        }
+        
+        #moban {
+            width: 90%;
+            border-bottom: 1px solid black;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .headline {
+            font-size: 1.5rem;
+            font-weight: bolder;
+            margin-top: 3%;
+        }
+        
+        .picture {
+            width: 100%;
+            height: 220px;
+            margin-top: 8%;
+        }
+        
+        .picture1 {
+            width: 90%;
+            height: 220px;
+        }
+        
+        .time {
+            margin-top: 5%;
+            margin-bottom: 5%;
+            margin-left: -55%;
+        }
+        
+        .liebiao {
+            width: 210%;
+            height: 100px;
+            background-color: #F0F0F4;
+            display: none;
+        }
+        
+        .liebiao1 {
+            width: 100%;
+            height: 49px;
+            font-size: 1.2rem;
+            text-align: center;
+            line-height: 49px;
+        }
+        
+        .liebiao1 a {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sousuo">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="liang">
+                <div class="yikuang">
+                    <a href="toutiao.html"><img class="jiantou" src="img/5.png"></a>
+                    <div class="souzi">
+                        搜索
+                    </div>
+                </div>
+                <div class="erkuang">
+                    <div class="tou">
+                        <div class="tou1">
+                            <div class="fangtu">
+                                <img class="zhentu" src="img/6.jpg">
+                                <!--<div class="jiantou1"><img src="img/7.png"></div>-->
+                            </div>
+                        </div>
+
+                        <div class="liebiao">
+                            <div class="liebiao1">
+                                <a href="2huoche.html">火车票查询</a>
+                            </div>
+                            <div class="liebiao1">
+                                <a href="tianqi.html">天气查询</a>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="text" class="soukuang" placeholder="请输入时间，例如：0911">
+                </div>
+            </div>
+        </nav>
+        <div class="many">
+
+        </div>
+    </div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="http://apps.bdimg.com/libs/underscore.js/1.7.0/underscore-min.js" charset="utf-8"></script>
+<script type="text/template" id="templete">
+    <div id="moban">
+        <p class="headline">
+            <%= title %>
+        </p>
+        <div class="picture">
+            <img class="picture1" src="<%= img %>">
+        </div>
+        <p class="time">
+            <%= year %>年
+                <%= month %>月
+                    <%= day %>日</p>
+    </div>
+</script>
+<script>
+    var b = true;
+    $(".tou").click(function() {
+        if (b == false) {
+            b = true;
+            $(".liebiao").css("display", "none")
+        } else {
+            b = false;
+            $(".liebiao").css("display", "block")
+        }
+    })
+    $(function() {
+        $(".soukuang").keydown(function(e) {
+            if (e.keyCode == 13) {
+                fa()
+            }
+        });
+    });
+
+    function fa() {
+        $(".many").html("");
+        var qqq = $("#templete").html();
+        var www = _.template(qqq);
+        var hhh = $(".soukuang").val();
+        if (hhh == "") {
+            return
+        } else {
+            $.ajax({
+                type: "get",
+                url: "http://route.showapi.com/119-42",
+                data: {
+                    showapi_appid: "40582", //需要传入的参数
+                    showapi_sign: "30efa9bcecf146168ae9dc3d6101d564",
+                    date: hhh
+                },
+                success: function(data) {
+                    var obj = data.showapi_res_body.list;
+                    console.log(obj)
+                    $.each(obj, function(index, value) {
+                        // console.log(value);
+                        if (!value.img) {
+                            // console.log("sss");
+                            value.img = "";
+                            // console.log(obj[index]);
+                        }
+                        console.log(www)
+                        var eee = www(value);
+                        var $domObj = $(eee);
+                        $(".many").append($domObj);
+                    })
+                    var pictures = document.getElementsByClassName("picture1");
+                    var picturess = document.getElementsByClassName("picture");
+                    console.log(pictures);
+                    for (var i = 0; i < pictures.length; i++) {
+                        console.log(pictures[i].src);
+                        var s = pictures[i].src;
+                        var LastOne = s.replace(/^(.*[n])*.*(.|n)$/g, "$2");
+                        console.log(LastOne);
+                        if (LastOne == "l") {
+                            console.log("ss");
+                            console.log(pictures[i]);
+                            pictures[i].style.display = "none";
+                            picturess[i].style.height = "0px";
+                        }
+                    }
+
+                }
+            })
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <style>
+        body {
+            font: 400 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+            overflow-x: hidden;
+            margin: 0 auto;
+            background: #f2f2f2;
+        }
+        
+        .navbar,
+        body {
+            min-width: 320px;
+            max-width: 540px;
+            margin: 0 auto;
+        }
+        
+        #erkuang {
+            width: 90%;
+            height: 50%;
+        }
+        
+        .shizi {
+            position: absolute;
+            height: 43px;
+            background-color: #F4F5F6;
+            top: 45px;
+            right: 6px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="zong">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div id="top">
+                <div class="top1">
+                    <div class="xinfeng">
+                        <img class="fengtu" src="img/1.jpg">
+                    </div>
+                    <div class="jinri">
+                        今日头条
+                        <img class="jiazai" src="img/2.png">
+                    </div>
+                    <div class="fangda">
+                        <a href="sousuo.html"><img class="jing" src="img/3.png"></a>
+                    </div>
+                </div>
+                <div id="erkuang">
+
+                    <div id="topNav" class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><span>热点</span><span class="xiaomaolv" style="display:none;">news_hot</span></div>
+                            <div class="swiper-slide"><span>视频</span><span class="xiaomaolv" style="display:none;">video</span></div>
+                            <div class="swiper-slide"><span>社会</span><span class="xiaomaolv" style="display:none;">news_society</span></div>
+                            <!--<div class="swiper-slide"><span>娱乐</span><span class="xiaomaolv" style="display:none;">news_entertainment</span></div>-->
+                            <!--<div class="swiper-slide"><span>问答</span><span class="xiaomaolv" style="display:none;">question_and_answer</span></div>-->
+                            <div class="swiper-slide"><span>图片</span><span class="xiaomaolv" style="display:none;">组图</span></div>
+                            <div class="swiper-slide"><span>科技</span><span class="xiaomaolv" style="display:none;">news_tech</span></div>
+                            <!--<div class="swiper-slide"><span>汽车</span><span class="xiaomaolv" style="display:none;">news_car</span></div>-->
+                            <div class="swiper-slide"><span>体育</span><span class="xiaomaolv" style="display:none;">news_sport</span></div>
+                            <div class="swiper-slide"><span>财经</span><span class="xiaomaolv" style="display:none;">news_finance</span></div>
+                            <div class="swiper-slide"><span>军事</span><span class="xiaomaolv" style="display:none;">news_military</span></div>
+                            <div class="swiper-slide"><span>国际</span><span class="xiaomaolv" style="display:none;">news_world</span></div>
+                            <div class="swiper-slide"><span>段子</span><span class="xiaomaolv" style="display:none;">essay_joke</span></div>
+                            <div class="swiper-slide"><span>趣图</span><span class="xiaomaolv" style="display:none;">image_funny</span></div>
+                        </div>
+                    </div>
+                    <div class="shizi">
+                        <img class="zhenshi" src="img/4.png">
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="moban">
+
+        </div>
+    </div>
+
+</body>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="http://apps.bdimg.com/libs/underscore.js/1.7.0/underscore-min.js" charset="utf-8"></script>
+<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+
+<script type="text/javascript">
+    var mySwiper = new Swiper('#topNav', {
+        freeMode: true,
+        freeModeMomentumRatio: 0.5,
+        slidesPerView: 'auto',
+    });
+    swiperWidth = mySwiper.container[0].clientWidth
+    maxTranslate = mySwiper.maxTranslate();
+    maxWidth = -maxTranslate + swiperWidth / 2
+    $(".swiper-container").on('touchstart', function(e) {
+        // e.preventDefault()
+    })
+    mySwiper.on('tap', function(swiper, e) {
+        // e.preventDefault()
+        slide = swiper.slides[swiper.clickedIndex]
+        slideLeft = slide.offsetLeft
+        slideWidth = slide.clientWidth
+        slideCenter = slideLeft + slideWidth / 2
+            // 被点击slide的中心点
+        mySwiper.setWrapperTransition(300)
+        if (slideCenter < swiperWidth / 2) {
+            mySwiper.setWrapperTranslate(0)
+        } else if (slideCenter > maxWidth) {
+            mySwiper.setWrapperTranslate(maxTranslate)
+        } else {
+            nowTlanslate = slideCenter - swiperWidth / 2
+            mySwiper.setWrapperTranslate(-nowTlanslate)
+        }
+        $("#topNav  .active").removeClass('active')
+        $("#topNav .swiper-slide").eq(swiper.clickedIndex).addClass('active')
+    })
+    $.each($(".swiper-slide"), function(index) {
+        // console.log($("swiper-slide").eq(index))
+        $(".swiper-slide").eq(index).click(function() {
+            $('#moban').html('');
+            var damaolv = $(".swiper-slide").eq(index).children('.xiaomaolv').html()
+                // console.log(damaolv)
+            fun(damaolv)
+        })
+    })
+
+    function fun(felei) {
+        // document.body.html = '';
+        document.html = '';
+        var imglist = [];
+        $.ajax({
+            type: "get",
+            url: "http://is.snssdk.com/api/news/feed/v51/?category=" + felei + "&refer=1&count=20&min_behot_time=1491981025&last_refresh_sub_entrance_interval=1491981165&loc_mode=&loc_time=1491981000&latitude=&longitude=&city=&tt_from=pull&lac=&cid=&cp=&iid=0123456789&device_id=12345678952&ac=wifi&channel=&aid=&app_name=&version_code=&version_name=&device_platform=&ab_version=&ab_client=&ab_group=&ab_feature=&abflag=3&ssmix=a&device_type=&device_brand=&language=zh&os_api=&os_version=&openudid=1b8d5bf69dc4a561&manifest_version_code=&resolution=&dpi=&update_version_code=&_rticket=",
+            dataType: "jsonp",
+            async: "false",
+            success: function(ser) {
+                console.log(ser.total_number);
+                var obj = ser.data;
+                // console.log(obj);
+
+                for (var i = 0; i < obj.length; i++) {
+                    var objs = JSON.parse(obj[i].content)
+                    console.log(JSON.parse(obj[i].content))
+
+                    if (objs.title) {
+                        var biaoti = objs.title;
+                    } else {
+                        biaoti = objs.title_prefix;
+                    }
+                    var box = document.createElement("div");
+                    var box1 = document.createElement("div");
+                    var box2 = document.createElement("div");
+                    var box3 = document.createElement("div");
+                    box.id = "box";
+                    box1.id = "box1";
+                    box2.id = "box2";
+                    box3.id = "box3";
+                    $("#moban").append(box);
+                    box.append(box1);
+                    box.append(box2);
+                    box.append(box3);
+                    $(box1).append("<a href='" + objs.url + "'> " + biaoti);
+
+                    if (objs.image_list != "") {
+                        for (var j = 0; j < objs.image_list.length; j++) {
+                            $(box2).append("<img class='tupian' src = '" + objs.image_list[j].url + "'>");
+                        }
+                    } else {
+                        $(box2).append(objs.abstract);
+                    }
+
+                    $(box3).append("<span class ='xiaozi'>" + objs.source + "</span>");
+                    $(box3).append("<span class='xiaozi'>" + "评论:" + objs.comment_count + "</span>");
+                    var unixTimestamp = new Date(objs.publish_time * 1000);
+                    var commonTime = unixTimestamp.toLocaleString();
+                    $(box3).append("<span class='xiaozi'>" + "时间:" + commonTime + "</span>");
+                }
+            }
+        })
+        var flag = true;
+        var page = 0;
+        $(window).scroll(function(event) {
+            // console.log(flag);
+            if (!flag) {
+                return
+            }
+            // var rate = $(window).
+            var foot = $(window).scrollTop() >= $(document).height() - $(window).height() - 100;
+            // console.log(foot);
+            if (foot) {
+                page++
+                // console.log("改加载下一页了");
+                fun(felei);
+                flag = false;
+                console.log(1111);
+            }
+        });
+    }
+    fun($(".swiper-slide").eq(0).children('.xiaomaolv').html())
+</script>
+
+</html>
